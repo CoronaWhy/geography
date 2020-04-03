@@ -13,7 +13,8 @@ with open('HISTORY.md') as history_file:
 
 install_requires = [
     'pandas',
-    'requests'
+    'requests',
+    'hdx-python-api'
 ]
 
 setup_requires = [
