@@ -1,7 +1,6 @@
 import argparse
 
-from south_korea_patients import south_korea_patients
-
+from kr_covid import kr_covid
 
 def get_argparser():
     parser = argparse.ArgumentParser()
@@ -17,7 +16,7 @@ def main():
     parser = get_argparser()
     args = parser.parse_args()
 
-    dataset = south_korea_patients()
+    dataset = kr_covid()
     dataset.to_csv(args.output, index=False, header=True)
 
 
