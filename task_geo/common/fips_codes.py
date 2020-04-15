@@ -3291,5 +3291,6 @@ COUNTY_FIPS_CODES = {
 def county_fips_to_name(fips_code):
     return COUNTY_FIPS_CODES[fips_code] if fips_code in COUNTY_FIPS_CODES else 'Unknown'
 
+
 def state_fips_to_name(fips_code):
     return STATE_FIPS_CODES[fips_code]["full_name"]

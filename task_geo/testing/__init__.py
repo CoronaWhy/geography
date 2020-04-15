@@ -1,4 +1,4 @@
-LOCATION_TERMS = ['city', 'subregion', 'region', 'country']
+LOCATION_TERMS = ['city', 'subregion', 'region', 'country', 'state', 'county']
 
 
 def get_geographical_granularity(data):
