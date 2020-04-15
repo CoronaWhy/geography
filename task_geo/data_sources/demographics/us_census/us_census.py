@@ -14,7 +14,7 @@ Data Credits:
 import pandas as pd
 import fips_codes
 
-URL = 'https://api.census.gov/data/2019/pep/population?get=LASTUPDATE,POP,DENSITY,UNIVERSE&for=county:*&in=state:*&key=5436a8b95e523baaa40c22ec906af88a93f405eb'
+URL = 'https://api.census.gov/data/2019/pep/population?get=LASTUPDATE,POP,DENSITY&for=county:*&in=state:*&key=5436a8b95e523baaa40c22ec906af88a93f405eb'
 API_KEY = '5436a8b95e523baaa40c22ec906af88a93f405eb'
 
 
