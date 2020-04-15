@@ -67,10 +67,16 @@ def us_census_formatter(data):
     columns[columns.index('pop')] = 'population_estimate'
     data.columns = columns
     data.drop(0, inplace=True)
-    data["state_name"] = data["state"].apply(lambda state: state_fips_to_name(state))
-    data["county_name"] = data["state"] + data["county"]
-    data["county_name"] = data["county_name"].apply(
+    data["county"] = data["state"] + data["county"]
+    data["county"] = data["county"].apply(
         lambda county: county_fips_to_name(county))
+    data["state"] = data["state"].apply(lambda state: state_fips_to_name(state))
+    data["country"] = 'USA'
     data['last_update'] = pd.to_datetime(data.last_update)
+    cols_ordered = [
+        'country', 'state', 'county',
+        'last_update', 'population_estimate', 'density',
+    ]
+    data = data.reindex(columns=cols_ordered)
 
     return data
