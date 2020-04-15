@@ -36,8 +36,7 @@ def us_census_connector():
 
 
     Description:
-        - Opens the zip file URL and extracts the correct CSV
-        - Correct CSV: ACS 5Y Statistics
+        - Read the dataset in JSON format
 
     Returns:
         data (DataFrame with CSV Data)
