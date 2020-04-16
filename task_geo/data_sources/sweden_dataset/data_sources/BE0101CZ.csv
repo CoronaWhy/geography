@@ -1,0 +1,169 @@
+"region","household size","2019"
+"01 Stockholm county","1 person",406334
+"01 Stockholm county","2 persons",286522
+"01 Stockholm county","3 persons",135755
+"01 Stockholm county","4 persons",135563
+"01 Stockholm county","5 persons",50450
+"01 Stockholm county","6 persons",15377
+"01 Stockholm county","7 persons or more",12018
+"01 Stockholm county","all households",1042019
+"03 Uppsala county","1 person",69891
+"03 Uppsala county","2 persons",52542
+"03 Uppsala county","3 persons",20562
+"03 Uppsala county","4 persons",20452
+"03 Uppsala county","5 persons",7776
+"03 Uppsala county","6 persons",2276
+"03 Uppsala county","7 persons or more",1539
+"03 Uppsala county","all households",175038
+"04 Södermanland county","1 person",53736
+"04 Södermanland county","2 persons",43230
+"04 Södermanland county","3 persons",15450
+"04 Södermanland county","4 persons",14670
+"04 Södermanland county","5 persons",5692
+"04 Södermanland county","6 persons",1900
+"04 Södermanland county","7 persons or more",1480
+"04 Södermanland county","all households",136158
+"05 Östergötland county","1 person",87787
+"05 Östergötland county","2 persons",68280
+"05 Östergötland county","3 persons",24095
+"05 Östergötland county","4 persons",24206
+"05 Östergötland county","5 persons",8507
+"05 Östergötland county","6 persons",2532
+"05 Östergötland county","7 persons or more",1721
+"05 Östergötland county","all households",217128
+"06 Jönköping county","1 person",61264
+"06 Jönköping county","2 persons",51619
+"06 Jönköping county","3 persons",18271
+"06 Jönköping county","4 persons",19585
+"06 Jönköping county","5 persons",8014
+"06 Jönköping county","6 persons",2280
+"06 Jönköping county","7 persons or more",1493
+"06 Jönköping county","all households",162526
+"07 Kronoberg county","1 person",35775
+"07 Kronoberg county","2 persons",29035
+"07 Kronoberg county","3 persons",10182
+"07 Kronoberg county","4 persons",10674
+"07 Kronoberg county","5 persons",3990
+"07 Kronoberg county","6 persons",1197
+"07 Kronoberg county","7 persons or more",875
+"07 Kronoberg county","all households",91728
+"08 Kalmar county","1 person",47700
+"08 Kalmar county","2 persons",38658
+"08 Kalmar county","3 persons",12291
+"08 Kalmar county","4 persons",11950
+"08 Kalmar county","5 persons",4371
+"08 Kalmar county","6 persons",1264
+"08 Kalmar county","7 persons or more",763
+"08 Kalmar county","all households",116997
+"09 Gotland county","1 person",11589
+"09 Gotland county","2 persons",8826
+"09 Gotland county","3 persons",3189
+"09 Gotland county","4 persons",2858
+"09 Gotland county","5 persons",1082
+"09 Gotland county","6 persons",360
+"09 Gotland county","7 persons or more",227
+"09 Gotland county","all households",28131
+"10 Blekinge county","1 person",30189
+"10 Blekinge county","2 persons",24404
+"10 Blekinge county","3 persons",8063
+"10 Blekinge county","4 persons",8124
+"10 Blekinge county","5 persons",2881
+"10 Blekinge county","6 persons",868
+"10 Blekinge county","7 persons or more",524
+"10 Blekinge county","all households",75053
+"12 Skåne county","1 person",243315
+"12 Skåne county","2 persons",187147
+"12 Skåne county","3 persons",74524
+"12 Skåne county","4 persons",75210
+"12 Skåne county","5 persons",26999
+"12 Skåne county","6 persons",8486
+"12 Skåne county","7 persons or more",5859
+"12 Skåne county","all households",621540
+"13 Halland county","1 person",51668
+"13 Halland county","2 persons",47637
+"13 Halland county","3 persons",17241
+"13 Halland county","4 persons",19913
+"13 Halland county","5 persons",6952
+"13 Halland county","6 persons",1829
+"13 Halland county","7 persons or more",1178
+"13 Halland county","all households",146418
+"14 Västra Götaland county","1 person",309894
+"14 Västra Götaland county","2 persons",237577
+"14 Västra Götaland county","3 persons",92920
+"14 Västra Götaland county","4 persons",94093
+"14 Västra Götaland county","5 persons",32874
+"14 Västra Götaland county","6 persons",9942
+"14 Västra Götaland county","7 persons or more",7328
+"14 Västra Götaland county","all households",784628
+"17 Värmland county","1 person",58798
+"17 Värmland county","2 persons",44003
+"17 Värmland county","3 persons",14790
+"17 Värmland county","4 persons",13690
+"17 Värmland county","5 persons",4570
+"17 Värmland county","6 persons",1287
+"17 Värmland county","7 persons or more",727
+"17 Värmland county","all households",137865
+"18 Örebro county","1 person",60435
+"18 Örebro county","2 persons",44886
+"18 Örebro county","3 persons",15593
+"18 Örebro county","4 persons",15216
+"18 Örebro county","5 persons",5369
+"18 Örebro county","6 persons",1697
+"18 Örebro county","7 persons or more",1183
+"18 Örebro county","all households",144379
+"19 Västmanland county","1 person",52173
+"19 Västmanland county","2 persons",40456
+"19 Västmanland county","3 persons",14342
+"19 Västmanland county","4 persons",13765
+"19 Västmanland county","5 persons",5106
+"19 Västmanland county","6 persons",1568
+"19 Västmanland county","7 persons or more",1164
+"19 Västmanland county","all households",128574
+"20 Dalarna county","1 person",56487
+"20 Dalarna county","2 persons",44330
+"20 Dalarna county","3 persons",14943
+"20 Dalarna county","4 persons",13641
+"20 Dalarna county","5 persons",5090
+"20 Dalarna county","6 persons",1507
+"20 Dalarna county","7 persons or more",1070
+"20 Dalarna county","all households",137068
+"21 Gävleborg county","1 person",58652
+"21 Gävleborg county","2 persons",43860
+"21 Gävleborg county","3 persons",15128
+"21 Gävleborg county","4 persons",13906
+"21 Gävleborg county","5 persons",4768
+"21 Gävleborg county","6 persons",1483
+"21 Gävleborg county","7 persons or more",873
+"21 Gävleborg county","all households",138670
+"22 Västernorrland county","1 person",48733
+"22 Västernorrland county","2 persons",37725
+"22 Västernorrland county","3 persons",13015
+"22 Västernorrland county","4 persons",12222
+"22 Västernorrland county","5 persons",4135
+"22 Västernorrland county","6 persons",1116
+"22 Västernorrland county","7 persons or more",723
+"22 Västernorrland county","all households",117669
+"23 Jämtland county","1 person",27624
+"23 Jämtland county","2 persons",19115
+"23 Jämtland county","3 persons",6739
+"23 Jämtland county","4 persons",6562
+"23 Jämtland county","5 persons",2326
+"23 Jämtland county","6 persons",649
+"23 Jämtland county","7 persons or more",369
+"23 Jämtland county","all households",63384
+"24 Västerbotten county","1 person",54604
+"24 Västerbotten county","2 persons",41160
+"24 Västerbotten county","3 persons",13715
+"24 Västerbotten county","4 persons",13858
+"24 Västerbotten county","5 persons",4952
+"24 Västerbotten county","6 persons",1254
+"24 Västerbotten county","7 persons or more",732
+"24 Västerbotten county","all households",130275
+"25 Norrbotten county","1 person",52757
+"25 Norrbotten county","2 persons",39600
+"25 Norrbotten county","3 persons",13354
+"25 Norrbotten county","4 persons",11779
+"25 Norrbotten county","5 persons",3769
+"25 Norrbotten county","6 persons",1098
+"25 Norrbotten county","7 persons or more",666
+"25 Norrbotten county","all households",123023

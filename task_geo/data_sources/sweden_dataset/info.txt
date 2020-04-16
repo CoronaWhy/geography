@@ -1,0 +1,41 @@
+File: population.csv
+Title: Care places, population, age distribution, population density and land area.
+Description: Number of available care places in outpatient care per 1,000 inhabitants. Mean number (yearly) of persons at different age in each county. Population density per sq. km 2019, Land area sq. km 2019. Data for 2019 and 2018 (care places).
+Source: http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0101__BE0101C/BefArealTathetKon/, http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0101__BE0101D/MedelfolkFodelsear/,
+https://vardenisiffror.se/indikator?metadatameasure=ab0dd634-b383-4233-8c79-16d968488e53&units=06&units=19&units=09&units=01&units=21&units=13&units=03&units=23&units=05&units=25&units=17&units=07&units=10&units=20&units=18&units=08&units=12&units=22&units=14&units=04&units=24&units=se&units=57013
+----------
+File: households.csv
+Title: Number of households of different sizes
+Description: Number of households in each county. A household contain from 1 to more than 10 persons. Data for 2019.
+Source: http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__BE__BE0101__BE0101S/HushallT03/
+----------
+File: income.csv
+Title: Disposable income
+Description: Disposable income at different group ages. Disposable income is the sum of all taxable and tax-free income minus taxes and negative transfers. The income includes gains/losses, that is, the gain/loss arising from a sale (realization) of assets, for example, stocks, mutual funds or real estate. Mean and median values. Data for 2018.
+Source: http://www.statistikdatabasen.scb.se/pxweb/en/ssd/START__HE__HE0110__HE0110G/Tab4bDispInkN/
+----------
+File: tobacco.csv
+Title: Tobacco consumption
+Description: Self-reported. Sex and region. Per cent. Data for 2015-2018.
+Source: http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/A_Folkhalsodata/A_Folkhalsodata__6_Levnadsvanor__dTobak__aTobakskonsumtion/tobak.px/
+-----------
+File: copd.csv
+Title: Chronic obstructive pulmonary disease mortality
+Description: Mortality sex, age, region. Number per 100 000 inhabitants. Data for 2014-2018.
+Source: http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/A_Folkhalsodata/A_Folkhalsodata__6_Levnadsvanor__iSjukDod__cTobak/Kol.px/
+------------
+File: lung_cancer.csv
+Title: Lung cancer mortality
+Description: Mortality sex, age, region. Number per 100 000 inhabitants. Data for 2015-2018 (?).
+Source: http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/A_Folkhalsodata/A_Folkhalsodata__6_Levnadsvanor__iSjukDod__cTobak/LungcancReg.px/table/tableViewLayout1/
+------------
+File: bmi.csv
+Title: Body Mass Index
+Description: BMI self-reported. Sex and region. Per cent. Data for 2015-2018.
+Source: http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/A_Folkhalsodata/A_Folkhalsodata__6_Levnadsvanor__cMatLivs/vikt.px/
+-----------
+File: diseases_issues.csv
+Title: Diseases and health issues
+Description: Self-reported. Sex and region. Per cent. Data for 2015-2018.
+Source: http://fohm-app.folkhalsomyndigheten.se/Folkhalsodata/pxweb/sv/B_HLV/B_HLV__bFyshals__bbdFyshalsovrigt/z_HLV_Sjukdom_besvar_regionalt.px/
+----------
