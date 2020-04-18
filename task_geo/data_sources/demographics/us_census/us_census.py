@@ -67,15 +67,19 @@ def us_census_formatter(data):
     data.columns = columns
     data.drop(0, inplace=True)
     data["county"] = data["state"] + data["county"]
-    data["county"] = data["county"].apply(
+    data["sub_region"] = data["county"].apply(
         lambda county: county_fips_to_name(county))
-    data["state"] = data["state"].apply(lambda state: state_fips_to_name(state))
+    data["region"] = data["state"].apply(lambda state: state_fips_to_name(state))
     data["country"] = 'USA'
     data['last_update'] = pd.to_datetime(data.last_update)
     cols_ordered = [
-        'country', 'state', 'county',
+        'country', 'region', 'sub_region',
         'last_update', 'population_estimate', 'density',
     ]
     data = data.reindex(columns=cols_ordered)
+    data = data.astype({
+        'population_estimate': 'float32',
+        'density': 'float32'
+    })
 
     return data
