@@ -11,6 +11,7 @@ Data Credits:
     https://data.census.gov/
 """
 import pandas as pd
+
 from task_geo.common.fips_codes import county_fips_to_name, state_fips_to_name
 
 URL = 'https://api.census.gov/data/2019/pep/population?get=LASTUPDATE,POP,' \

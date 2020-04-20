@@ -1,7 +1,9 @@
 from unittest import TestCase
-from task_geo.testing import check_dataset_format
-from task_geo.data_sources.demographics.us_census.us_census import us_census_formatter
+
 import pandas as pd
+
+from task_geo.data_sources.demographics.us_census.us_census import us_census_formatter
+from task_geo.testing import check_dataset_format
 
 
 class TestUsCensusFormatter(TestCase):
