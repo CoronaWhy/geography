@@ -97,9 +97,8 @@ def get_request_urls(country, start_date, end_date=None, metrics=None):
 
     stations_list = get_stations_by_country(country)
     inventory_data = load_dataset('inventory')
-    inventory_data = inventory_data[inventory_data.start_date >= start_date.year]
-    inventory_data = inventory_data[inventory_data.end_date <= end_date.year]
-    stations_list = [x for x in stations_list if x in inventory_data.ID]
+    inventory_data = inventory_data[inventory_data.end_date >= start_date.year]
+    stations_list = inventory_data[inventory_data.ID.isin(stations_list)].ID.unique()
     if len(stations_list) < max_stations_req:
         stations = ','.join(stations_list)
         return [
