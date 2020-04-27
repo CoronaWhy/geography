@@ -26,6 +26,8 @@ def noaa_api(countries, start_date, end_date=None, metrics=None, country_aggr=Fa
             SNOW: Snowfall (mm).
             SNWD: Snow depth (mm).
             PRCP: Precipitation.
+            PSUN: Daily percent of possible sunshine (percent)
+            TSUN: Daily total sunshine (minutes)
         country_aggr(bool): When True, only an aggregate for each date/country will be returned.
 
     Example:
@@ -36,4 +38,5 @@ def noaa_api(countries, start_date, end_date=None, metrics=None, country_aggr=Fa
     >>> noaa_api(countries, start_date, end_date)
     """
     raw = noaa_api_connector(countries, start_date, end_date, metrics)
+
     return noaa_api_formatter(raw, metrics, country_aggr)
