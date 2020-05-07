@@ -108,3 +108,4 @@ ENV/
 
 notebooks/data/
 docs/notebooks
+data/all_daily_data.tar.gz
