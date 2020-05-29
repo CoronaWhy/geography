@@ -16,12 +16,15 @@
    :caption: Data Source Examples
 
    notebooks/data_sources/NOAA_API.ipynb
+   notebooks/data_sources/es_covid.ipynb
+   notebooks/data_sources/HDX_API.ipynb
 
 .. toctree::
    :caption: Development Resources
    :hidden:
 
    contributing
+   maintainer_guide
    code_of_conduct
    style_guide
    data_model
