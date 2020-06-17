@@ -1,0 +1,48 @@
+{
+    "title": "United States Census Bureau Population Estimation",
+    "description": "Annual Population Estimates for the United States, States and Counties: April 1, 2010 to July 1, 2019",
+    "licenses": [{"name": "copyright-authors"}],
+    "fields": [
+        {
+            "name": "last_update",
+            "description": "Last update of estimation",
+            "type": "datetime"
+        },
+        {
+            "name": "population_estimate",
+            "description": "Population estimate of county",
+            "type": "integer"
+        },
+        {
+            "name": "density",
+            "description": "Population density of county",
+            "type": "float"
+        },
+        {
+            "name": "state",
+            "description": "FIPS Code of county state",
+            "type": "string"
+        },
+        {
+            "name": "county",
+            "description": "FIPS Code of county",
+            "type": "string"
+        },
+        {
+            "name": "state_name",
+            "description": "Name of county state",
+            "type": "string"
+        },
+        {
+            "name": "county_name",
+            "description": "Name of county",
+            "type": "string"
+        }
+    ],
+    "keywords": [
+        "US",
+        "population",
+        "estimation",
+        "census"
+    ]
+}

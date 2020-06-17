@@ -2,21 +2,21 @@
 us_census.py
 
 Functions:
-    - us_census_connector: Extracts data from CSV URL
-    - us_census_formatter: Cleans CSV data
+    - us_census_connector: Extracts data from JSON URL
+    - us_census_formatter: Cleans and format data
     - us_census: Combines the two previous functions
 
 Data Credits:
     The United States Census Bureau
     https://data.census.gov/
 """
-
-import urllib.request
-import zipfile
-
 import pandas as pd
 
-url = 'https://data.census.gov/api/access/table/download?download_id=iuGrLXEBm-bIwvlxENnx'
+from task_geo.common.fips_codes import county_fips_to_name, state_fips_to_name
+
+URL = 'https://api.census.gov/data/2019/pep/population?get=LASTUPDATE,POP,' \
+      'DENSITY&for=county:*&in=state:*&key=5436a8b95e523baaa40c22ec906af88a93f405eb '
+API_KEY = '5436a8b95e523baaa40c22ec906af88a93f405eb'
 
 
 def us_census():
@@ -37,22 +37,13 @@ def us_census_connector():
 
 
     Description:
-        - Opens the zip file URL and extracts the correct CSV
-        - Correct CSV: ACS 5Y Statistics
+        - Read the dataset in JSON format
 
     Returns:
         data (DataFrame with CSV Data)
     """
 
-    urllib.request.urlretrieve(url, "uscensus.zip")
-
-    with zipfile.ZipFile("uscensus.zip") as myzip:
-
-        listFiles = myzip.namelist()
-
-        myzip.extract(listFiles[5])
-        data = pd.read_csv(listFiles[5], low_memory=False)
-
+    data = pd.read_json(URL)
     return data
 
 
@@ -63,26 +54,33 @@ def us_census_formatter(data):
         data(pandas.DataFrame): Data as returned by us_census_connector.
 
     Description:
-        - Drop unnecessary columns and set index to county
-        - Make column values more readable
+        - Set columns
+        - Rename and lower column names
+        - Format dates
+        - Enrich state and county data
 
     Returns:
         pandas.DataFrame
     """
-
-    data.columns = data.iloc[0]
+    columns = list(data.iloc[0].map(lambda column: column.lower()))
+    columns[columns.index('lastupdate')] = 'last_update'
+    columns[columns.index('pop')] = 'population_estimate'
+    data.columns = columns
     data.drop(0, inplace=True)
-    data.drop("id", axis=1, inplace=True)
-    data = data.set_index('Geographic Area Name')
-
-    cols = [c for c in data.columns if '2018' in c]
-    data = data[cols]
-    data.columns = [x.split("!!")[-1] for x in data.columns]
-
-    data = data.replace("N", 0.0)
-    data.columns = [x.lower() for x in data.columns]
-
-    data.drop(data.columns[-1], axis=1, inplace=True)
-    data.drop(data.columns[-1], axis=1, inplace=True)
+    data["county"] = data["state"] + data["county"]
+    data["sub_region"] = data["county"].apply(
+        lambda county: county_fips_to_name(county))
+    data["region"] = data["state"].apply(lambda state: state_fips_to_name(state))
+    data["country"] = 'USA'
+    data['last_update'] = pd.to_datetime(data.last_update)
+    cols_ordered = [
+        'country', 'region', 'sub_region',
+        'last_update', 'population_estimate', 'density',
+    ]
+    data = data.reindex(columns=cols_ordered)
+    data = data.astype({
+        'population_estimate': 'float32',
+        'density': 'float32'
+    })
 
     return data
