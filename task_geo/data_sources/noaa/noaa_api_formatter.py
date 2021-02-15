@@ -48,6 +48,10 @@ def noaa_api_formatter(raw, metrics=None, country_aggr=False):
         data['prcp'] = data['prcp'].astype(float) / 1000
         data.prcp.fillna(0, inplace=True)
 
+    if 'tsun' in data.columns:
+        data['tsun'] = data['tsun'].astype(float) * 60
+        data['tsun'].fillna(0,inplace=True)
+
     data['country'] = data.station.str.slice(0, 2).apply(fips_to_name)
     data = data[column_order]
 

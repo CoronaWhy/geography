@@ -30,7 +30,7 @@ logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 
-DEFAULT_METRICS = ['TMAX', 'TMIN', 'TAVG', 'PCRP', 'SNOW', 'SNWD']
+DEFAULT_METRICS = ['TMAX', 'TMIN', 'TAVG', 'PCRP', 'SNOW', 'SNWD', 'PSUN', 'TSUN']
 
 
 def get_stations_by_country(country):
@@ -70,6 +70,8 @@ def get_request_urls(country, start_date, end_date=None, metrics=None):
             SNOW: Snowfall (mm).
             SNWD: Snow depth (mm).
             PRCP: Precipitation.
+            PSUN: Daily percent of possible sunshine (percent)
+            TSUN: Daily total sunshine (minutes)
 
     Returns:
         str
@@ -94,6 +96,9 @@ def get_request_urls(country, start_date, end_date=None, metrics=None):
     end = end_date.date().isoformat()
 
     stations_list = get_stations_by_country(country)
+    inventory_data = load_dataset('inventory')
+    inventory_data = inventory_data[inventory_data.end_date >= start_date.year]
+    stations_list = inventory_data[inventory_data.ID.isin(stations_list)].ID.unique()
     if len(stations_list) < max_stations_req:
         stations = ','.join(stations_list)
         return [
@@ -160,6 +165,9 @@ def noaa_api_connector(countries, start_date, end_date=None, metrics=None):
             TAVG: Average of temperature.
             SNOW: Snowfall (mm).
             SNWD: Snow depth (mm).
+            PRCP: Precipitation.
+            PSUN: Daily percent of possible sunshine (percent)
+            TSUN: Daily total sunshine (minutes)
 
     Returns:
         tuple[list[dict], list[Exception]]
@@ -196,4 +204,5 @@ def noaa_api_connector(countries, start_date, end_date=None, metrics=None):
         metrics = DEFAULT_METRICS
 
     columns.extend([metric for metric in metrics if metric in data.columns])
+
     return data[columns]

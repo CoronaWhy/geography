@@ -1,6 +1,6 @@
 import argparse
 
-from ftp import download_noaa_files, process_noaa_data
+from ftp_connector import download_noaa_files, process_noaa_data
 
 
 def get_argparser():
